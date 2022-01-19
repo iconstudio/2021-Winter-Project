@@ -7,9 +7,7 @@ public class IntroTextWave : MonoBehaviour
 {
 	public TextMesh mtext;
 	private Vector3 mPosition, mTargetPosition;
-	/// <summary>
-	/// 인트로 글자의 모양 단계
-	/// </summary>
+
 	private class Phase
 	{
 		public float mTime;

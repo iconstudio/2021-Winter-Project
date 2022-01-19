@@ -15,7 +15,7 @@ D:/yoyof/Documents/Git/2021-Winter-Project/Mole Hunter
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57589
+52453
 Successfully changed project path to: D:/yoyof/Documents/Git/2021-Winter-Project/Mole Hunter
 D:/yoyof/Documents/Git/2021-Winter-Project/Mole Hunter
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ D:/yoyof/Documents/Git/2021-Winter-Project/Mole Hunter
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 113.52 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 125.29 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.7f1 (6bd9e232123f)
 [Subsystems] Discovering subsystems at path C:/Program Files/2021.2.7f1/Editor/Data/Resources/UnitySubsystems
@@ -63,92 +63,92 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/2021.2.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/2021.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/2021.2.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56196
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56332
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/2021.2.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/2021.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.012876 seconds.
+Registered in 0.014589 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 106.74 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 118.38 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.856 seconds
+- Completed reload, in  0.963 seconds
 Domain Reload Profiling:
-	ReloadAssembly (857ms)
-		BeginReloadAssembly (112ms)
+	ReloadAssembly (965ms)
+		BeginReloadAssembly (118ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (617ms)
-			LoadAssemblies (107ms)
+		EndReloadAssembly (691ms)
+			LoadAssemblies (113ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (137ms)
+			SetupTypeCache (157ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (34ms)
-			SetupLoadedEditorAssemblies (362ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (407ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (21ms)
+				InitializePlatformSupportModulesInManaged (29ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (107ms)
+				RefreshPlugins (119ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (173ms)
-				ProcessInitializeOnLoadMethodAttributes (59ms)
+				ProcessInitializeOnLoadAttributes (186ms)
+				ProcessInitializeOnLoadMethodAttributes (71ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.029221 seconds.
+Registered in 0.033983 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.93 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.583 seconds
+- Completed reload, in  1.449 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1584ms)
-		BeginReloadAssembly (178ms)
+	ReloadAssembly (1450ms)
+		BeginReloadAssembly (162ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (28ms)
-		EndReloadAssembly (1237ms)
-			LoadAssemblies (151ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (1135ms)
+			LoadAssemblies (144ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (368ms)
+			SetupTypeCache (350ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (82ms)
-			SetupLoadedEditorAssemblies (572ms)
+			RebuildScriptCaches (69ms)
+			SetupLoadedEditorAssemblies (522ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (23ms)
+				InitializePlatformSupportModulesInManaged (18ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (156ms)
-				ProcessInitializeOnLoadAttributes (343ms)
-				ProcessInitializeOnLoadMethodAttributes (31ms)
-				AfterProcessingInitializeOnLoad (16ms)
+				BeforeProcessingInitializeOnLoad (142ms)
+				ProcessInitializeOnLoadAttributes (314ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (17ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 1.79 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3350 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 31 unused Assets / (112.5 KB). Loaded Objects now: 3818.
-Memory consumption went from 135.0 MB to 134.9 MB.
-Total: 4.035900 ms (FindLiveObjects: 0.409300 ms CreateObjectMapping: 0.103000 ms MarkObjects: 3.377600 ms  DeleteObjects: 0.144700 ms)
+Unloading 3351 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 31 unused Assets / (112.9 KB). Loaded Objects now: 3820.
+Memory consumption went from 135.2 MB to 135.1 MB.
+Total: 5.144600 ms (FindLiveObjects: 0.633800 ms CreateObjectMapping: 0.200300 ms MarkObjects: 4.142400 ms  DeleteObjects: 0.166200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,269 +163,581 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 218778.954619 seconds.
-  path: Assets/Scenes/SceneGame.unity
-  artifactKey: Guid(b13111b0425b394409496a79f9bd4f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SceneGame.unity using Guid(b13111b0425b394409496a79f9bd4f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f2cf6995fe06b477eeb074c20c32d4d') in 0.027922 seconds 
+  Time since last request: 221565.637360 seconds.
+  path: Assets/Addons/Photon Unity Networking/readme.txt
+  artifactKey: Guid(d90864ccbf99d4a449c87472b0a181e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Addons/Photon Unity Networking/readme.txt using Guid(d90864ccbf99d4a449c87472b0a181e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e5b477f70490ed91cad4049c2ab33a9') in 0.065792 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 47.579269 seconds.
-  path: Assets/Prefabs
-  artifactKey: Guid(4a032ec6afedb0341b913d1bf578560c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs using Guid(4a032ec6afedb0341b913d1bf578560c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '519b6c8c935e548dac69ed12a633d214') in 0.010675 seconds 
+  Time since last request: 84.031846 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/MarcoPolo-Tutorial/Monstergame/Resources/textures/oudemanoogcolor_1.png
+  artifactKey: Guid(4560358f08b2be84faf7909c817c6bdd) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/MarcoPolo-Tutorial/Monstergame/Resources/textures/oudemanoogcolor_1.png using Guid(4560358f08b2be84faf7909c817c6bdd) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '42ddb572fa70fb9c5b79d6dbbf418e0c') in 0.124504 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 146.195759 seconds.
-  path: Assets/Prefabs/PrefabShovel.prefab
-  artifactKey: Guid(18ae1254a99adf047be18b052ee403d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PrefabShovel.prefab using Guid(18ae1254a99adf047be18b052ee403d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60f49248984f4bb6ee85c906543dd4c9') in 0.064643 seconds 
+  Time since last request: 0.000066 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Skin/BoxText.png
+  artifactKey: Guid(761ff1491b1f86c4d924261c553ac9cc) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Skin/BoxText.png using Guid(761ff1491b1f86c4d924261c553ac9cc) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '38c883cbb824d1f619e52456f388827f') in 0.016913 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 65.905556 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Textures/Colorsheet Tree Fall.png
-  artifactKey: Guid(99897f7919c46fc43969a2a130434315) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Textures/Colorsheet Tree Fall.png using Guid(99897f7919c46fc43969a2a130434315) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '1af0f64cd17cc83215e31bf1278c2f2a') in 0.027314 seconds 
+  Time since last request: 0.000075 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Textures/UnitTextureBlue.png
+  artifactKey: Guid(bf44fd0b5bb0c4142b16ba9db02789fc) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Textures/UnitTextureBlue.png using Guid(bf44fd0b5bb0c4142b16ba9db02789fc) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '1eea54b82470cace4a3de60e8844b6d6') in 0.022939 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Textures/Colorsheet Tree Cold.png
-  artifactKey: Guid(ed297eb21cb5e5e4188600ba2d272554) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Textures/Colorsheet Tree Cold.png using Guid(ed297eb21cb5e5e4188600ba2d272554) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '46d5e6e068cd73cd8bfa7aadded7c781') in 0.023921 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.063821 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type4 05.dae
-  artifactKey: Guid(05f4a294fb6ca7e4c87b33948d1ebec3) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type4 05.dae using Guid(05f4a294fb6ca7e4c87b33948d1ebec3) Importer(-1,00000000000000000000000000000000) Launched and connected uv unwrapper C:/Program Files/2021.2.7f1/Editor/Data/Tools/UnwrapCL.exe after 0.08 seconds
- -> (artifact id: '5ae3ac90c98f971751707e2d4edc62fc') in 0.371664 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type2 05.dae
-  artifactKey: Guid(08370ae33fad3da4a8357631f8a9f5ae) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type2 05.dae using Guid(08370ae33fad3da4a8357631f8a9f5ae) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'db2e74b6a9f54393188719572dcefb72') in 0.045972 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type7 02.dae
-  artifactKey: Guid(819c10f136958e549bf2eb4702b8f111) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type7 02.dae using Guid(819c10f136958e549bf2eb4702b8f111) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'a743895ed958ead641855c0553f1ea71') in 0.049776 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type2 02.dae
-  artifactKey: Guid(2ea73da7fe37e7b42bb77b26e97df11f) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type2 02.dae using Guid(2ea73da7fe37e7b42bb77b26e97df11f) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '1dcd91018b1173c1e7f20d5917e982f9') in 0.035586 seconds 
+  Time since last request: 0.000042 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Skin/BoxOrangeRed.png
+  artifactKey: Guid(72708a25103c3fe4f9074f7296e86b7a) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Skin/BoxOrangeRed.png using Guid(72708a25103c3fe4f9074f7296e86b7a) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '068683fde4a84575eefbf3ba799d79c3') in 0.018458 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000028 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type3 04.dae
-  artifactKey: Guid(f52689dc8ea801b46874ff4a4a6c328a) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type3 04.dae using Guid(f52689dc8ea801b46874ff4a4a6c328a) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'a73b5272e98b06e61c9c6953f9d299af') in 0.081006 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type1 05.dae
-  artifactKey: Guid(f6c597498257ae843adeb6a76dd3013e) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type1 05.dae using Guid(f6c597498257ae843adeb6a76dd3013e) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '102e4e24963d45b377df6df9b5e93c30') in 0.042700 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type3 03.dae
-  artifactKey: Guid(35c5b6683953dc54f99f68b4a16819f7) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type3 03.dae using Guid(35c5b6683953dc54f99f68b4a16819f7) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '8812e9989e1f875a42f6d357b63f6780') in 0.070859 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type0 01.dae
-  artifactKey: Guid(d2821924b86cff5439f12b0289585dbf) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type0 01.dae using Guid(d2821924b86cff5439f12b0289585dbf) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '8d14f24149977bcf64a8dffa9fc10545') in 0.080604 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type5 04.dae
-  artifactKey: Guid(2ab8bbefc4a0d4948b52fdcbd7c3489b) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type5 04.dae using Guid(2ab8bbefc4a0d4948b52fdcbd7c3489b) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '805fdd7723acc58cc8ee5a46866fbf60') in 0.061542 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type4 01.dae
-  artifactKey: Guid(9ddce011fb3cf3341b8c252c9b00cb4c) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type4 01.dae using Guid(9ddce011fb3cf3341b8c252c9b00cb4c) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '8a8abfadcdf576c45bc0d4cba4fe5001') in 0.036384 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type3 01.dae
-  artifactKey: Guid(5166d739d26f73246a2623515169479e) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type3 01.dae using Guid(5166d739d26f73246a2623515169479e) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'e08b3b1d867c05782ab752b8eff123e8') in 0.038148 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type1 01.dae
-  artifactKey: Guid(cb132eeaea305bc478721cc9b5cb57f8) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type1 01.dae using Guid(cb132eeaea305bc478721cc9b5cb57f8) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '1e315ad331da12ba8aa9738d6337c1e0') in 0.035894 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type0 06.dae
-  artifactKey: Guid(58e56545a2d219944b78729eaa444a51) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type0 06.dae using Guid(58e56545a2d219944b78729eaa444a51) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '45f6cc3aaf1165f5c9dd3b9873aec610') in 0.062255 seconds 
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Textures/UnitTextureRed.png
+  artifactKey: Guid(9349ff1a2d6d7804486fef5d7c3a67de) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Textures/UnitTextureRed.png using Guid(9349ff1a2d6d7804486fef5d7c3a67de) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '76118dd873ff3d8c625445917f4af71d') in 0.035751 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000034 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type2 03.dae
-  artifactKey: Guid(770b1e3321cb97344b7b5f9ccc2bfe56) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type2 03.dae using Guid(770b1e3321cb97344b7b5f9ccc2bfe56) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'abdf5c8b00dd3108f6c2cd0849e95adb') in 0.039351 seconds 
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Textures/Gradient.png
+  artifactKey: Guid(4ca1824a2e144f043b9eb7d6e3777659) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Textures/Gradient.png using Guid(4ca1824a2e144f043b9eb7d6e3777659) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'd7cef2fa2dae35633e31f4e0ed675f8f') in 0.032735 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type7 04.dae
-  artifactKey: Guid(f59e9c62851aaed46bb0599645bdfdc2) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type7 04.dae using Guid(f59e9c62851aaed46bb0599645bdfdc2) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '1ac0153b1b135ae5421fe9dbff1acb42') in 0.051918 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type6 04.dae
-  artifactKey: Guid(66f0726e43c72a94aa9dc7aa4b6cbfe0) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type6 04.dae using Guid(66f0726e43c72a94aa9dc7aa4b6cbfe0) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'cdd3406bf6cb3c8cacc448ad16fc2234') in 0.134377 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type7 03.dae
-  artifactKey: Guid(32b2d01a42b6ac84d9e11d5f05c569e1) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type7 03.dae using Guid(32b2d01a42b6ac84d9e11d5f05c569e1) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'd71c669a75c200d04fa1937aba26e698') in 0.041532 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type3 05.dae
-  artifactKey: Guid(0658909382c77d041b643ae92bd27b82) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type3 05.dae using Guid(0658909382c77d041b643ae92bd27b82) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '5521d03c211c0072e9496e0272bc5fa2') in 0.076389 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type4 03.dae
-  artifactKey: Guid(10155e34e1176c3489486fbf0cef1736) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type4 03.dae using Guid(10155e34e1176c3489486fbf0cef1736) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '4c899cdda63b91b81cf404851c11c82f') in 0.050521 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/BrokenVector/LowPolyTreePack/Models/Tree Type1 02.dae
-  artifactKey: Guid(e063977d54ec61849aacc1b8e9eafc6f) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyTreePack/Models/Tree Type1 02.dae using Guid(e063977d54ec61849aacc1b8e9eafc6f) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'a73b6cf15388a7c39019a9a6ec26cafd') in 0.032677 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 24.343676 seconds.
-  path: Assets/BrokenVector/LowPolyRockPack/Textures/Colorsheet Rock Orange.png
-  artifactKey: Guid(373999fd26f1a054dab3611997559ef1) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyRockPack/Textures/Colorsheet Rock Orange.png using Guid(373999fd26f1a054dab3611997559ef1) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '4ce4f038eab5eb7e2af23e67325a9aab') in 0.021607 seconds 
+  Time since last request: 0.000056 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/MarcoPolo-Tutorial/Monstergame/Resources/textures/muktarnormalhighq_1.png
+  artifactKey: Guid(8f3b8af169a9a814698111fd64643579) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/MarcoPolo-Tutorial/Monstergame/Resources/textures/muktarnormalhighq_1.png using Guid(8f3b8af169a9a814698111fd64643579) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '04a71d9264ca5695730df0fb88846bf6') in 0.166902 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000038 seconds.
-  path: Assets/BrokenVector/LowPolyRockPack/Textures/Colorsheet Rock Grey.png
-  artifactKey: Guid(6eb1476b439514548903a089becbf46a) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyRockPack/Textures/Colorsheet Rock Grey.png using Guid(6eb1476b439514548903a089becbf46a) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '6cd1623662f14cdbbadea0e6f65a6cbf') in 0.020344 seconds 
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Skin/ToggleOnHover.png
+  artifactKey: Guid(e10a16d9e8c6b844db2d3c1c5e4f231e) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Skin/ToggleOnHover.png using Guid(e10a16d9e8c6b844db2d3c1c5e4f231e) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'e2f9a85f6dce1cdc4bd3408d38557737') in 0.017975 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.019799 seconds.
-  path: Assets/BrokenVector/LowPolyRockPack/Models/Rock Type3 03.dae
-  artifactKey: Guid(08d02c187472d684096f88c67beb6890) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyRockPack/Models/Rock Type3 03.dae using Guid(08d02c187472d684096f88c67beb6890) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '712bd0b9217dd776644f814f40f77b6c') in 0.037344 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/BrokenVector/LowPolyRockPack/Models/Rock Type4 02.dae
-  artifactKey: Guid(2aeea187d4a9dce4da2f26d62f5bbc96) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyRockPack/Models/Rock Type4 02.dae using Guid(2aeea187d4a9dce4da2f26d62f5bbc96) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '1b878d59633c870b6ebcab503ee164d5') in 0.039807 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/BrokenVector/LowPolyRockPack/Models/Rock Type5 03.dae
-  artifactKey: Guid(8b9e37193d32fc840b941d5ea3cf8aed) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyRockPack/Models/Rock Type5 03.dae using Guid(8b9e37193d32fc840b941d5ea3cf8aed) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '95691aacd60824ec5a66a09da8f0ea78') in 0.034808 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/BrokenVector/LowPolyRockPack/Models/Rock Type2 03.dae
-  artifactKey: Guid(a797bea746bba59439067b50859ce461) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyRockPack/Models/Rock Type2 03.dae using Guid(a797bea746bba59439067b50859ce461) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'a4e03a0bb1c1d593d0c23066442e6a91') in 0.035342 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/BrokenVector/LowPolyRockPack/Models/Rock Type1 02.dae
-  artifactKey: Guid(110d2d66b09076d4e88fb91dc58961ab) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyRockPack/Models/Rock Type1 02.dae using Guid(110d2d66b09076d4e88fb91dc58961ab) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '41f144a2af02cd817df04357cc3ae2d6') in 0.048553 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/BrokenVector/LowPolyRockPack/Models/Rock Type4 03.dae
-  artifactKey: Guid(b8ebafa78dff0064cb20deada72cb631) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyRockPack/Models/Rock Type4 03.dae using Guid(b8ebafa78dff0064cb20deada72cb631) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'a0f89bda50b609713622467bbfdf5ea8') in 0.035629 seconds 
+  Time since last request: 0.000044 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Textures/Robot_Color.png
+  artifactKey: Guid(1fbb41709a1d9334696860db720026e5) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Textures/Robot_Color.png using Guid(1fbb41709a1d9334696860db720026e5) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '01ba1ded7a1731c496ab9406e3e729e2') in 0.198853 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000042 seconds.
-  path: Assets/BrokenVector/LowPolyRockPack/Models/Rock Type3 02.dae
-  artifactKey: Guid(5ccad72751160e341ad0b43ec43a620a) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyRockPack/Models/Rock Type3 02.dae using Guid(5ccad72751160e341ad0b43ec43a620a) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '31ddbcda5ea816b7a8daa8b086d2cb4e') in 0.042182 seconds 
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Skin/BoxTextHover.png
+  artifactKey: Guid(13154691f37c1884c865b54d8bd29d6e) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Skin/BoxTextHover.png using Guid(13154691f37c1884c865b54d8bd29d6e) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '7fddd0c47bf0150c05297680ad3f64d5') in 0.018112 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Skin/BoxBright.png
+  artifactKey: Guid(ab6d288fac925ae48bbeb5e02d83dce3) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Skin/BoxBright.png using Guid(ab6d288fac925ae48bbeb5e02d83dce3) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'dc65782ab6a240462eb10b0d7fe5dd26') in 0.034570 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.454921 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/RapidStrafe_Left.fbx
+  artifactKey: Guid(08257633e3910e54a8cc5e8ed9cc9afe) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/RapidStrafe_Left.fbx using Guid(08257633e3910e54a8cc5e8ed9cc9afe) Importer(-1,00000000000000000000000000000000) Keyframe reduction: Ratio: 44.088978%;
+File 'RapidStrafe_Left' has rig import warnings. See Import Messages in Rig Import Tab for more details.
+ -> (artifact id: '9fca9c8dce45726c6e4448d5b428ede3') in 0.246203 seconds 
+  ERROR: Import of 'Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/RapidStrafe_Left.fbx' had errors: File 'RapidStrafe_Left' has rig import warnings. See Import Messages in Rig Import Tab for more details.
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/RapidStrafe_Right.fbx
+  artifactKey: Guid(15fe083e5eaac314d8eea8ef3ed65046) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/RapidStrafe_Right.fbx using Guid(15fe083e5eaac314d8eea8ef3ed65046) Importer(-1,00000000000000000000000000000000) Keyframe reduction: Ratio: 44.088978%;
+File 'RapidStrafe_Right' has rig import warnings. See Import Messages in Rig Import Tab for more details.
+ -> (artifact id: '9506e20b0a427e40f612f4c413f623cc') in 0.207987 seconds 
+  ERROR: Import of 'Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/RapidStrafe_Right.fbx' had errors: File 'RapidStrafe_Right' has rig import warnings. See Import Messages in Rig Import Tab for more details.
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/JogBackward_NtrlFaceFwd.fbx
+  artifactKey: Guid(4c299da8335ebd746bc4ade9f15d7d93) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/JogBackward_NtrlFaceFwd.fbx using Guid(4c299da8335ebd746bc4ade9f15d7d93) Importer(-1,00000000000000000000000000000000) Keyframe reduction: Ratio: 20.221941%;
+File 'JogBackward_NtrlFaceFwd' has rig import warnings. See Import Messages in Rig Import Tab for more details.
+ -> (artifact id: 'e8592e4572f00b9b0b5fed4cba6c3911') in 0.263779 seconds 
+  ERROR: Import of 'Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/JogBackward_NtrlFaceFwd.fbx' had errors: File 'JogBackward_NtrlFaceFwd' has rig import warnings. See Import Messages in Rig Import Tab for more details.
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Models/BoundingMesh.obj
+  artifactKey: Guid(a494fd02c2f15b842ba2f5393004cfa3) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Models/BoundingMesh.obj using Guid(a494fd02c2f15b842ba2f5393004cfa3) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'e8c7c1815688e8bbb16cd99e977cc70f') in 0.034155 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000039 seconds.
-  path: Assets/BrokenVector/LowPolyRockPack/Models/Rock Type3 01.dae
-  artifactKey: Guid(d01883e876066d54280ca7ceb187f173) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyRockPack/Models/Rock Type3 01.dae using Guid(d01883e876066d54280ca7ceb187f173) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '61b3eda5a37e124393a11a69ad5bee30') in 0.051525 seconds 
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/IdlesWave.fbx
+  artifactKey: Guid(c387a0e47b4244f2b86c50372341024a) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/IdlesWave.fbx using Guid(c387a0e47b4244f2b86c50372341024a) Importer(-1,00000000000000000000000000000000) Keyframe reduction: Ratio: 16.323896%;
+File 'IdlesWave' has rig import warnings. See Import Messages in Rig Import Tab for more details.
+ -> (artifact id: '208baf768708165c0acafc0ec4442f07') in 1.361002 seconds 
+  ERROR: Import of 'Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/IdlesWave.fbx' had errors: File 'IdlesWave' has rig import warnings. See Import Messages in Rig Import Tab for more details.
+
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/BrokenVector/LowPolyRockPack/Models/Rock Type2 02.dae
-  artifactKey: Guid(815ec0c049d4ec849bd4960c32e13ec2) Importer(-1,00000000000000000000000000000000)
-Start importing Assets/BrokenVector/LowPolyRockPack/Models/Rock Type2 02.dae using Guid(815ec0c049d4ec849bd4960c32e13ec2) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'ee7424c40400142e9987ca5752c60b66') in 0.039758 seconds 
+  Time since last request: 0.000040 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Models/Pointer.fbx
+  artifactKey: Guid(0baebe6c8f51e754a96dd7d4dee9bb4e) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Models/Pointer.fbx using Guid(0baebe6c8f51e754a96dd7d4dee9bb4e) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'c7730a7aa2774479a7cb8fd99c09115d') in 0.077922 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 17.771213 seconds.
-  path: Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type1 02.prefab
-  artifactKey: Guid(dc8f0d303746c2a4b89ee60884906304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type1 02.prefab using Guid(dc8f0d303746c2a4b89ee60884906304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7ad0fddb229f84ed3ad3739c47ab8a9') in 0.124330 seconds 
+  Time since last request: 0.000037 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/Idles.fbx
+  artifactKey: Guid(ce448a8080b4e934b8473badd27be402) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/Idles.fbx using Guid(ce448a8080b4e934b8473badd27be402) Importer(-1,00000000000000000000000000000000) File 'Idles' has rig import warnings. See Import Messages in Rig Import Tab for more details.
+ -> (artifact id: '8f3755342f97e0b174cc219769723226') in 0.495155 seconds 
+  ERROR: Import of 'Assets/Addons/Photon Unity Networking/Demos/Shared Assets/Animations/Idles.fbx' had errors: File 'Idles' has rig import warnings. See Import Messages in Rig Import Tab for more details.
+
+========================================================================
+Received Import Request.
+  Time since last request: 387.127111 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/MarcoPolo-Tutorial/Polo.wav
+  artifactKey: Guid(4ad7633f7befb9d4b81c2123c39c2dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Addons/Photon Unity Networking/Demos/MarcoPolo-Tutorial/Polo.wav using Guid(4ad7633f7befb9d4b81c2123c39c2dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cedd11569e557f0a04c863b321f6984') in 0.175353 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.038177 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.653 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1654ms)
+		BeginReloadAssembly (266ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (59ms)
+		EndReloadAssembly (1185ms)
+			LoadAssemblies (183ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (379ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (526ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (133ms)
+				ProcessInitializeOnLoadAttributes (317ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (20ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3345 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (103.1 KB). Loaded Objects now: 3841.
+Memory consumption went from 139.0 MB to 138.9 MB.
+Total: 4.391600 ms (FindLiveObjects: 0.387700 ms CreateObjectMapping: 0.209400 ms MarkObjects: 3.653300 ms  DeleteObjects: 0.138900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.031191 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.732 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1733ms)
+		BeginReloadAssembly (233ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (1294ms)
+			LoadAssemblies (170ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (442ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (68ms)
+			SetupLoadedEditorAssemblies (538ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (132ms)
+				ProcessInitializeOnLoadAttributes (325ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (20ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3345 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (102.4 KB). Loaded Objects now: 3843.
+Memory consumption went from 139.0 MB to 138.9 MB.
+Total: 4.179200 ms (FindLiveObjects: 0.428300 ms CreateObjectMapping: 0.147400 ms MarkObjects: 3.454400 ms  DeleteObjects: 0.147600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.032088 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.665 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1666ms)
+		BeginReloadAssembly (223ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (52ms)
+		EndReloadAssembly (1261ms)
+			LoadAssemblies (158ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (430ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (525ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (134ms)
+				ProcessInitializeOnLoadAttributes (313ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (20ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3345 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (102.5 KB). Loaded Objects now: 3845.
+Memory consumption went from 139.0 MB to 138.9 MB.
+Total: 4.868300 ms (FindLiveObjects: 0.428600 ms CreateObjectMapping: 0.108400 ms MarkObjects: 4.153100 ms  DeleteObjects: 0.176600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.031598 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.699 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1700ms)
+		BeginReloadAssembly (219ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (1297ms)
+			LoadAssemblies (161ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (442ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (536ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (133ms)
+				ProcessInitializeOnLoadAttributes (322ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (20ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3345 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (102.3 KB). Loaded Objects now: 3847.
+Memory consumption went from 139.0 MB to 138.9 MB.
+Total: 4.042200 ms (FindLiveObjects: 0.385100 ms CreateObjectMapping: 0.107800 ms MarkObjects: 3.357400 ms  DeleteObjects: 0.190000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 346.860225 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/PunBasics-Tutorial/Prefabs/Game Manager.prefab
+  artifactKey: Guid(b7fe671fa5d4d4772a4b20715fb9b0ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Addons/Photon Unity Networking/Demos/PunBasics-Tutorial/Prefabs/Game Manager.prefab using Guid(b7fe671fa5d4d4772a4b20715fb9b0ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1a2334f5e956837e75407b91efb9d2a') in 0.081285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.022890 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/PunBasics-Tutorial/Materials/UnitTextureGreen12x.mat
+  artifactKey: Guid(8c13ddd2bc8fa4e85943376cf7c8bf7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Addons/Photon Unity Networking/Demos/PunBasics-Tutorial/Materials/UnitTextureGreen12x.mat using Guid(8c13ddd2bc8fa4e85943376cf7c8bf7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21457f4c97193c592499733173877a08') in 0.083387 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/PunBasics-Tutorial/Materials/UnitTextureYellow12x.mat
+  artifactKey: Guid(ceba02e8dfaf34474b36fe43b51b69db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Addons/Photon Unity Networking/Demos/PunBasics-Tutorial/Materials/UnitTextureYellow12x.mat using Guid(ceba02e8dfaf34474b36fe43b51b69db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a07a6893e2fb471dacce2963e658e94') in 0.022895 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 655.024643 seconds.
+  path: Assets/Addons/BrokenVector/LowPolyTreePack/Textures/Colorsheet Tree Dry.png
+  artifactKey: Guid(9236635f319ab034fa33215e8eaa903a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Addons/BrokenVector/LowPolyTreePack/Textures/Colorsheet Tree Dry.png using Guid(9236635f319ab034fa33215e8eaa903a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2907bf81611701f640f9dd6efe8a4c04') in 0.058142 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000030 seconds.
-  path: Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type2 04.prefab
-  artifactKey: Guid(5578b82f17c954843901e8b68ca21dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type2 04.prefab using Guid(5578b82f17c954843901e8b68ca21dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85e79524a6150830be135ceb83e842fb') in 0.026817 seconds 
+  path: Assets/Addons/BrokenVector/LowPolyTreePack/Textures/Colorsheet Tree Normal.png
+  artifactKey: Guid(8ba8b94b5ab0c214fa2810a7df98a1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Addons/BrokenVector/LowPolyTreePack/Textures/Colorsheet Tree Normal.png using Guid(8ba8b94b5ab0c214fa2810a7df98a1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02d2acac779ea3174d424455589423bb') in 0.034683 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.030012 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.398 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1399ms)
+		BeginReloadAssembly (199ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (1033ms)
+			LoadAssemblies (138ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (337ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (444ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (111ms)
+				ProcessInitializeOnLoadAttributes (261ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (19ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3355 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (104.9 KB). Loaded Objects now: 3925.
+Memory consumption went from 140.4 MB to 140.3 MB.
+Total: 4.191800 ms (FindLiveObjects: 0.403100 ms CreateObjectMapping: 0.109700 ms MarkObjects: 3.434400 ms  DeleteObjects: 0.242600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type3 04.prefab
-  artifactKey: Guid(ace40d2a4a1290f4f96f01a7e4ecd7f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type3 04.prefab using Guid(ace40d2a4a1290f4f96f01a7e4ecd7f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '052f15fe0d70543a3206d5ba68e5f032') in 0.023500 seconds 
+  Time since last request: 61.415624 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/Demo2DJumpAndRunWithPhysics/Sprites/CharacterSheet.psd
+  artifactKey: Guid(6eedfc74195a44648b72bcf755811a88) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/Demo2DJumpAndRunWithPhysics/Sprites/CharacterSheet.psd using Guid(6eedfc74195a44648b72bcf755811a88) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'f479542e0c52479bbedf420a85173bdc') in 0.298780 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.030056 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\yoyof\Documents\Git\2021-Winter-Project\Mole Hunter\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.596 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1597ms)
+		BeginReloadAssembly (229ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (53ms)
+		EndReloadAssembly (1197ms)
+			LoadAssemblies (160ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (390ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (510ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (125ms)
+				ProcessInitializeOnLoadAttributes (302ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
+				AfterProcessingInitializeOnLoad (25ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3393 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (102.5 KB). Loaded Objects now: 3967.
+Memory consumption went from 141.6 MB to 141.5 MB.
+Total: 4.667200 ms (FindLiveObjects: 0.468900 ms CreateObjectMapping: 0.192200 ms MarkObjects: 3.841000 ms  DeleteObjects: 0.162200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type6 02.prefab
-  artifactKey: Guid(bcd44f8d0f766b340b72d555a8df8a72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type6 02.prefab using Guid(bcd44f8d0f766b340b72d555a8df8a72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a92c3c391eb838d7453516cda483eccc') in 0.026049 seconds 
+  Time since last request: 153.235040 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/DemoBoxes/Resources/UnitTexture.png
+  artifactKey: Guid(f64bcca960c279c4da8509f61a33db8f) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/DemoBoxes/Resources/UnitTexture.png using Guid(f64bcca960c279c4da8509f61a33db8f) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '58fa9465753c03631471fc51787cb710') in 0.053046 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type3 02.prefab
-  artifactKey: Guid(61b490990a08faa419b1bb6a6708ad09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type3 02.prefab using Guid(61b490990a08faa419b1bb6a6708ad09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f48543a9da3fdb8afe8236eb5e2eaed') in 0.024978 seconds 
+  Time since last request: 0.000042 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/DemoWorker/Art/Simple.png
+  artifactKey: Guid(63208023146d7db48808272f2547b257) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/DemoWorker/Art/Simple.png using Guid(63208023146d7db48808272f2547b257) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '657b017a6d3fe39d4800351bb4c3ad66') in 0.042082 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type2 01.prefab
-  artifactKey: Guid(2d521608fcf07c346b5e2ed4049aa717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type2 01.prefab using Guid(2d521608fcf07c346b5e2ed4049aa717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88fd1c42d12bfcd52320604c25643725') in 0.023449 seconds 
+  Time since last request: 0.000051 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/DemoBoxes/Resources/ColorPreview.png
+  artifactKey: Guid(e824c90b700b59a48bb75bf8ac3b5682) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/DemoBoxes/Resources/ColorPreview.png using Guid(e824c90b700b59a48bb75bf8ac3b5682) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'eb7010b23bcd221e5d160692277f2f31') in 0.031167 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type5 04.prefab
-  artifactKey: Guid(329d0b0187f24cd4da9f775d83708bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type5 04.prefab using Guid(329d0b0187f24cd4da9f775d83708bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f82a962883fc3d0c8c9f4b66bb37922') in 0.023508 seconds 
+  Time since last request: 0.000051 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/DemoHub/Sprites/OutlinedSquaredBox.png
+  artifactKey: Guid(c222cd02c447941edb09ecb6433229ce) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/DemoHub/Sprites/OutlinedSquaredBox.png using Guid(c222cd02c447941edb09ecb6433229ce) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '0a913606899bd2aff27616f63fddd864') in 0.108550 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type6 01.prefab
-  artifactKey: Guid(78a4b58c8edc1884e932497bbb0da899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Addons/BrokenVector/LowPolyRockPack/Prefabs/Rock Type6 01.prefab using Guid(78a4b58c8edc1884e932497bbb0da899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f05456f22202c0e3a39ebf541e4d331') in 0.024615 seconds 
+  Time since last request: 0.000065 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/DemoHub/Sprites/Gradient.png
+  artifactKey: Guid(66efb24ed46044ab8a039599cbc47d7b) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/DemoHub/Sprites/Gradient.png using Guid(66efb24ed46044ab8a039599cbc47d7b) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'b65239619e67e4ca06d26a65979864f4') in 0.041079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/DemoHub/Sprites/PunIcon-White-129.png
+  artifactKey: Guid(56bbc6b42271d4177ac313247f47ac1f) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/DemoHub/Sprites/PunIcon-White-129.png using Guid(56bbc6b42271d4177ac313247f47ac1f) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '301eaeb07d2d13d9e7296dff41198a98') in 0.031242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/DemoWorker/Art/Character Controllers/Sources/PrototypeCharacter/Textures/constructor_normals.png
+  artifactKey: Guid(531c14f8d5cdc4e5baa83ee6e16f783a) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/DemoWorker/Art/Character Controllers/Sources/PrototypeCharacter/Textures/constructor_normals.png using Guid(531c14f8d5cdc4e5baa83ee6e16f783a) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'c76e8437a84a8645f1d3589a96373804') in 0.171371 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/DemoHub/toHub.png
+  artifactKey: Guid(56d51860189dbec438e8e3fba90c46cc) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/DemoHub/toHub.png using Guid(56d51860189dbec438e8e3fba90c46cc) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '403268a52da59603a47fb813179ba59c') in 0.019157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.342523 seconds.
+  path: Assets/Addons/Photon Unity Networking/Demos/DemoPickup/Assets/quad-mesh.obj
+  artifactKey: Guid(50e49398ae6a71246b696fbc151d11f7) Importer(-1,00000000000000000000000000000000)
+Start importing Assets/Addons/Photon Unity Networking/Demos/DemoPickup/Assets/quad-mesh.obj using Guid(50e49398ae6a71246b696fbc151d11f7) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'dc6aa9c6038c6b31da571f8cbe9d5984') in 0.045110 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
