@@ -11,7 +11,6 @@ using UnityEngine.UI;
 
 public class LoginManager : PunBehaviour
 {
-	public GameManager My_manager;
 	public TMP_InputField Inputfield_nickname;
 	public Button Button_signup;
 	public TextMeshProUGUI Text_notification;
@@ -20,12 +19,12 @@ public class LoginManager : PunBehaviour
 
 	public void LoginProceed()
 	{
-		if (PhotonNetwork.connected && !Done && Inputfield_nickname is not null)
+		if (MoleHunter.Is_connected && !Done && Inputfield_nickname is not null)
 		{
 			var My_nickname = Inputfield_nickname.text.Trim();
 			if (0 < My_nickname.Length)
 			{
-				var player_check = GameManager.PlayerExists(My_nickname);
+				var player_check = MoleHunter.PlayerExists(My_nickname);
 
 				if (!player_check)
 				{
@@ -47,10 +46,6 @@ public class LoginManager : PunBehaviour
 
 	public void Awake()
 	{
-		My_manager = FindObjectOfType<GameManager>();
-		if (My_manager is null)
-			throw new System.Exception("The game manager does not exist!");
-
 		var myComponent = GameObject.Find("NickNameInputField");
 		Inputfield_nickname = myComponent.GetComponent<TMP_InputField>();
 
@@ -65,7 +60,7 @@ public class LoginManager : PunBehaviour
 	}
 	public void Update()
 	{
-		if (PhotonNetwork.connected)
+		if (MoleHunter.Is_connected)
 		{
 			Text_notification.gameObject.SetActive(true);
 			if (Error_code == null)
