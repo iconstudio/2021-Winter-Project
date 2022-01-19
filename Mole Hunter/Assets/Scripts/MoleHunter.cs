@@ -9,7 +9,6 @@ using ExPhoton = ExitGames.Client.Photon;
 public class MoleHunter : PunBehaviour
 {
 	public static readonly string GAME_VERSION = "0.0.1";
-
 	public static readonly ExPhoton.Hashtable Player_attributes = new();
 	public enum META_PLAYER : uint
 	{
@@ -70,7 +69,6 @@ public class MoleHunter : PunBehaviour
 		Connect();
 		yield return null;
 	}
-
 
 	public static bool Is_connected => PhotonNetwork.connected;
 	public static PhotonPlayer SearchPlayer(PlyerPredicate predicate)
