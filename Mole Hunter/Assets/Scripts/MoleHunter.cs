@@ -8,6 +8,8 @@ using ExPhoton = ExitGames.Client.Photon;
 
 public class MoleHunter : PunBehaviour
 {
+	private static MoleHunter Instance;
+
 	public static readonly string GAME_VERSION = "0.0.1";
 	public static readonly ExPhoton.Hashtable Player_attributes = new();
 	public enum META_PLAYER : uint
@@ -20,6 +22,16 @@ public class MoleHunter : PunBehaviour
 
 	public void Awake()
 	{
+		if (Instance is not null)
+		{
+			Destroy(gameObject);
+			return;
+		}
+		else
+		{
+			Instance = this;
+		}
+
 		Player_attributes.Add(META_PLAYER.NUM_OF_GAMES, 0);
 		Player_attributes.Add(META_PLAYER.WIN, 0);
 		Player_attributes.Add(META_PLAYER.LOSE, 0);
@@ -29,10 +41,6 @@ public class MoleHunter : PunBehaviour
 		PhotonNetwork.SetPlayerCustomProperties(Player_attributes);
 
 		DontDestroyOnLoad(gameObject);
-	}
-	public void Start()
-	{
-		StartCoroutine(RetryConnections());
 	}
 	public override void OnConnectedToPhoton()
 	{
@@ -46,8 +54,16 @@ public class MoleHunter : PunBehaviour
 	{
 		PrintError(cause);
 	}
+	public override void OnJoinedLobby()
+	{
+		print("Joined to the lobby.");
+	}
 
 	public void Connect()
+	{
+		StartCoroutine(RetryConnections());
+	}
+	public void TryConnect()
 	{
 		PhotonNetwork.ConnectUsingSettings(GAME_VERSION);
 
@@ -56,17 +72,17 @@ public class MoleHunter : PunBehaviour
 	private IEnumerator RetryConnections()
 	{
 		print("First trying connections");
-		Connect();
+		TryConnect();
 		yield return new WaitForSeconds(3f);
 
 		if (Is_connected) yield break;
 		print("Second trying connections");
-		Connect();
+		TryConnect();
 		yield return new WaitForSeconds(3f);
 
 		if (Is_connected) yield break;
 		print("Third trying connections");
-		Connect();
+		TryConnect();
 		yield return null;
 	}
 
