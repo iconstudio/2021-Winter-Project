@@ -31,13 +31,26 @@ public class GameManager : PunBehaviour
 		}
 	}
 
+	public VictoryUI Complete_info;
+	public PhotonView PhotonView;
 	public GameObject Camera;
 	public float Camera_speed = 3f;
 
+	public MoleHole[] Holes;
+	public int Holes_number => Holes.Length;
+
 	public void Awake()
 	{
+		Complete_info = GameObject.Find("VictoryUI");
+
 		Camera = GameObject.Find("GameCamera");
 		print("Camera is " + Camera.ToString());
+
+		Holes = FindObjectsOfType<MoleHole>();
+		foreach (var hole in Holes)
+		{
+			hole.SendMessage("Ready");
+		}
 	}
 	public void Start()
 	{
@@ -67,6 +80,12 @@ public class GameManager : PunBehaviour
 				var camvelocity = new Vector3(0f, Camera_speed, 0f);
 				this.Camera.transform.TransformVector(camvelocity);
 				this.Camera.transform.Translate(camvelocity * deltas);
+
+				if (Input.GetMouseButtonDown(0))
+				{
+					// attack
+
+				}
 			}
 			break;
 
@@ -84,16 +103,24 @@ public class GameManager : PunBehaviour
 
 	private IEnumerator GameProcess()
 	{
+		// 게임 준비
+
 		yield return new WaitForSeconds(Game_begin_time);
 
+		// 게임 시작
 		Phase = PHASE.GAME;
 
 		while (Game_time < Game_duration)
 		{
 			Game_time += Time.deltaTime;
+
+			// FixedUpdate와 같은 시간대
 			yield return new WaitForEndOfFrame();
 		}
 
+		// 게임 끝
 		Phase = PHASE.COMPLETE;
+
+
 	}
 }
