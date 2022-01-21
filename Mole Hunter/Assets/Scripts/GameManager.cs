@@ -41,7 +41,8 @@ public class GameManager : PunBehaviour
 
 	public void Awake()
 	{
-		Complete_info = GameObject.Find("VictoryUI");
+		var obj = GameObject.Find("VictoryUI");
+		Complete_info = obj.GetComponent<VictoryUI>();
 
 		Camera = GameObject.Find("GameCamera");
 		print("Camera is " + Camera.ToString());

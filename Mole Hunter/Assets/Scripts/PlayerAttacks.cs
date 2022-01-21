@@ -36,7 +36,7 @@ public class PlayerAttacks : PunBehaviour
 	{
 		if (MoleHunter.Is_connected && Owner != null)
 		{
-			photonView.owner
+			//photonView.owner
 		} 
 		else if (!MoleHunter.Is_connected)
 		{
