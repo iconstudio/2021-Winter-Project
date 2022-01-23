@@ -1,22 +1,19 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 using Photon;
-using ExPhoton = ExitGames.Client.Photon;
-using System;
 
 public class IntroManager : PunBehaviour
 {
 	public float Period = 3f;
 
-	IEnumerator GotoNextRoom()
+	IEnumerator GotoMain()
 	{
 		yield return new WaitForSecondsRealtime(Period);
 
-		SceneManager.LoadScene("SceneMain");
+		MoleHunter.LoadScene("SceneMain");
 	}
 
 	public void Start()
@@ -36,6 +33,6 @@ public class IntroManager : PunBehaviour
 	}
 	public override void OnConnectedToPhoton()
 	{
-		StartCoroutine(GotoNextRoom());
+		StartCoroutine(GotoMain());
 	}
 }

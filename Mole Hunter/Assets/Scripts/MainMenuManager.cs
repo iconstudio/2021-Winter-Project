@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 
 using Photon;
-using ExPhoton = ExitGames.Client.Photon;
 
 using TMPro;
+
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LoginManager : PunBehaviour
+public class MainMenuManager : PunBehaviour
 {
 	public TMP_InputField Inputfield_nickname;
 	public Button Button_signup;
@@ -17,7 +15,7 @@ public class LoginManager : PunBehaviour
 	public int? Error_code = null;
 	private bool Done = false;
 
-	public void LoginProceed()
+	public void LoginAndJoinLobbyProceed()
 	{
 		if (MoleHunter.Is_connected && !Done && Inputfield_nickname is not null)
 		{
@@ -25,16 +23,25 @@ public class LoginManager : PunBehaviour
 			if (0 < My_nickname.Length)
 			{
 				var player_check = MoleHunter.PlayerExists(My_nickname);
-
 				if (!player_check)
 				{
 					Done = true;
 
 					PlayerPrefs.SetString("NickName", My_nickname);
+					PhotonNetwork.playerName = My_nickname;
+
 					print("Player's nickname is " + My_nickname + ".");
 
-					SceneManager.LoadScene("SceneGame");
-					print("Going to the game scene.");
+					var joined = PhotonNetwork.JoinLobby();
+					if (joined)
+					{
+						print("Joined to the lobby!");
+						//MoleHunter.LoadScene("SceneGame");
+					}
+					else
+					{
+						throw new Exception("Cannot join the lobby!");
+					}
 				}
 				else
 				{
@@ -60,21 +67,21 @@ public class LoginManager : PunBehaviour
 	}
 	public void Update()
 	{
-		if (MoleHunter.Is_connected)
+		if (Error_code is not null)
+		{
+			Text_notification.text = "Error Appeared: " + Error_code;
+		}
+		else if (MoleHunter.Is_connected)
 		{
 			Text_notification.gameObject.SetActive(true);
-			if (Error_code == null)
+			if (Error_code is null)
 			{
 				Text_notification.text = "Network Connected";
-			}
-			else
-			{
-				Text_notification.text = "Error Appeared: " + Error_code;
 			}
 
 			if (Input.GetButtonDown("Submit"))
 			{
-				LoginProceed();
+				LoginAndJoinLobbyProceed();
 			}
 		}
 		else

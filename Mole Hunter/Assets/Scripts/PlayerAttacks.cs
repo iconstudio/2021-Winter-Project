@@ -10,11 +10,10 @@ using Photon;
 /// <summary>
 /// 플레이어의 공격을 담당하는 클래스
 /// </summary>
-[RequireComponent(typeof(PlayerAttributes))]
+[RequireComponent(typeof(Player))]
 public class PlayerAttacks : PunBehaviour
 {
 	[Header("States")]
-	public PhotonPlayer Owner;
 	public bool Attacking = false;
 
 	[Header("Timings")]
@@ -25,23 +24,25 @@ public class PlayerAttacks : PunBehaviour
 	{
 		if (MoleHunter.Is_connected)
 		{
-			Owner = PhotonNetwork.player;
+
 		}
 		else
 		{
-			throw new Exception("Disconnect");
+			throw new Exception("Disconnectded");
 		}
 	}
 	public void Update()
 	{
-		if (MoleHunter.Is_connected && Owner != null)
+		if (MoleHunter.Is_connected && photonView.owner is not null)
 		{
-			//photonView.owner
-		} 
-		else if (!MoleHunter.Is_connected)
-		{
-			Destroy(gameObject);
-			print(Owner + " is disconnected.");
+			if (photonView.isMine)
+			{
+
+			}
+			else
+			{
+
+			}
 		}
 	}
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 using Photon;
 using ExPhoton = ExitGames.Client.Photon;
@@ -38,10 +39,13 @@ public class MoleHunter : PunBehaviour
 		Player_attributes.Add(META_PLAYER.DRAW, 0);
 		Player_attributes.Add(META_PLAYER.SCORE_RANKING, 0);
 
+		PhotonNetwork.autoCleanUpPlayerObjects = true;
+		PhotonNetwork.autoJoinLobby = false;
 		PhotonNetwork.SetPlayerCustomProperties(Player_attributes);
 
 		DontDestroyOnLoad(gameObject);
 	}
+
 	public override void OnConnectedToPhoton()
 	{
 		print("Connection Succeed");
@@ -84,6 +88,12 @@ public class MoleHunter : PunBehaviour
 		print("Third trying connections");
 		TryConnect();
 		yield return null;
+	}
+
+	public static void LoadScene(string scene_name)
+	{
+		SceneManager.LoadScene(scene_name);
+		print("Going to " + scene_name + ".");
 	}
 
 	public static bool Is_connected => PhotonNetwork.connected;

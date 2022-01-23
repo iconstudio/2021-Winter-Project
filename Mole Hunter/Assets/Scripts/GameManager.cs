@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 
 using UnityEngine;
 
@@ -42,7 +41,7 @@ public class GameManager : PunBehaviour
 	public void Awake()
 	{
 		var obj = GameObject.Find("VictoryUI");
-		Complete_info = obj.GetComponent<VictoryUI>();
+		Complete_info = obj?.GetComponent<VictoryUI>();
 
 		Camera = GameObject.Find("GameCamera");
 		print("Camera is " + Camera.ToString());
@@ -61,7 +60,7 @@ public class GameManager : PunBehaviour
 	}
 	public void Update()
 	{
-		if (Camera is null)
+		if (Camera is null || photonView.owner is null)
 		{
 			return;
 		}
@@ -85,7 +84,8 @@ public class GameManager : PunBehaviour
 				if (Input.GetMouseButtonDown(0))
 				{
 					// attack
-
+					Ray mouse_clicker = new();
+					mouse_clicker.direction = this.Camera.transform.forward; //Vector3.forward;
 				}
 			}
 			break;
