@@ -1,12 +1,14 @@
 using System.Collections;
 
 using UnityEngine;
+using UnityEngine.Scripting;
 
 using Photon;
 using ExPhoton = ExitGames.Client.Photon;
 
 public class GameManager : PunBehaviour
 {
+	[Header("Game Timings")]
 	public float Game_begin_time = 3.5f;
 	public float Game_time = 0f, Game_duration = (float)System.TimeSpan.FromMinutes(3).TotalSeconds;
 	public enum PHASE
@@ -30,12 +32,19 @@ public class GameManager : PunBehaviour
 		}
 	}
 
+	[Header("Game Props")]
+	public GameObject 
+		
+		;
+	[Space(4)]
+
+	[Header("Game Props")]
 	public VictoryUI Complete_info;
 	public PhotonView PhotonView;
 	public GameObject Camera;
 	public float Camera_speed = 3f;
-
 	public MoleHole[] Holes;
+
 	public int Holes_number => Holes.Length;
 
 	public void Awake()
