@@ -10,6 +10,7 @@ using ExPhoton = ExitGames.Client.Photon;
 public class MoleHunter : PunBehaviour
 {
 	private static MoleHunter Instance;
+	public static string My_room;
 
 	public static readonly string GAME_VERSION = "0.0.1";
 	public static readonly ExPhoton.Hashtable Player_attributes = new();

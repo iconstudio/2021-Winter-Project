@@ -49,7 +49,7 @@ public class GameManager : PunBehaviour
 		Holes = FindObjectsOfType<MoleHole>();
 		foreach (var hole in Holes)
 		{
-			hole.SendMessage("Ready");
+			hole.gameObject.SendMessage("Ready");
 		}
 	}
 	public void Start()
