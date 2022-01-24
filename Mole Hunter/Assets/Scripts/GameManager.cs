@@ -11,7 +11,7 @@ public class GameManager : PunBehaviour
 	public float Game_time = 0f, Game_duration = (float)System.TimeSpan.FromMinutes(3).TotalSeconds;
 	public enum PHASE
 	{
-		READY, GAME, COMPLETE, DONE
+		READY, GAME, COMPLETE, DONE,
 	}
 	private PHASE __Phase = PHASE.READY;
 	public PHASE Phase
@@ -92,7 +92,7 @@ public class GameManager : PunBehaviour
 
 			case PHASE.DONE:
 			{
-
+				
 			}
 			break;
 		}
@@ -106,7 +106,7 @@ public class GameManager : PunBehaviour
 	{
 		// 게임 준비
 
-		yield return new WaitForSeconds(Game_begin_time);
+		yield return new WaitForSeconds(Game_begin_time)
 
 		// 게임 시작
 		Phase = PHASE.GAME;

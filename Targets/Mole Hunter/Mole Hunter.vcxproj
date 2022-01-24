@@ -201,6 +201,9 @@
     </ResourceCompile>
     <Manifest Include="WindowsPlayer.manifest" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="UnityData.vcxitems" Label="UnityData" />
   <ImportGroup Label="ExtensionTargets">
