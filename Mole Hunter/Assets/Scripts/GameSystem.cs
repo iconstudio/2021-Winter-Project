@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Scripting;
 
 using Photon;
+using PN = PhotonNetwork;
 using ExPhoton = ExitGames.Client.Photon;
 
 public class GameSystem : PunBehaviour
@@ -63,6 +64,11 @@ public class GameSystem : PunBehaviour
 	public void Start()
 	{
 		Game_time = 0f;
+
+		if (!PN.connected)
+		{
+			GameManager.Connect();
+		}
 
 		StartCoroutine(GameProcess());
 	}

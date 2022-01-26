@@ -7,7 +7,7 @@ using UnityEngine.UI;
 using Photon;
 using PN = PhotonNetwork;
 
-public class LobbyRoomsList : UnityEngine.MonoBehaviour
+public class LobbyRoomsList : PunBehaviour
 {
 	public GameObject Description;
 	public RoomInfo[] Rooms;
@@ -39,7 +39,10 @@ public class LobbyRoomsList : UnityEngine.MonoBehaviour
 	{
 		if (PN.connectedAndReady && PN.insideLobby)
 		{
-
+			var rooms_number = Rooms.Length;
+			var last_index = rooms_number % 4;
+			if (Room_page < last_index - 1)
+				Room_page++;
 		}
 	}
 
@@ -50,17 +53,8 @@ public class LobbyRoomsList : UnityEngine.MonoBehaviour
 	void Start()
 	{
 		TurnOffAllRoomSlots();
-
-		if (PN.connectedAndReady && PN.insideLobby)
-		{
-			StartCoroutine(UpdateRooms());
-		}
 	}
-	void Update()
-	{
-
-	}
-	private IEnumerator UpdateRooms()
+	public override void OnReceivedRoomListUpdate()
 	{
 		if (PN.connectedAndReady && PN.insideLobby)
 		{
@@ -70,44 +64,30 @@ public class LobbyRoomsList : UnityEngine.MonoBehaviour
 			var rooms_number = Rooms.Length;
 			if (0 < rooms_number)
 			{
-				Description?.SetActive(false);
+				Description.SetActive(false);
+				ItemPanel.SetActive(true);
 
-				if (4 < rooms_number)
+				if (0 < rooms_number)
 				{
-					var first_index = Room_page % 4 + Room_page * 4;
-					var last_index = Mathf.Min(first_index + 4, rooms_number);
-
-					for (int i = first_index; i < last_index; i++)
+					for (int i = 0; i < 4; i++)
 					{
-						var Item_room = Rooms[i];
+						var j = Room_page % 4 + i;
+						if (rooms_number <= j) break;
 
-						var j = i % 4;
-						var Slot = Items[j];
+						var Slot = Items[i];
+						Slot.SetActive(true);
+						var caption = Slot.GetComponentInChildren<Text>();
 
-						if (Item_room is not null && Slot is not null)
-						{
-							Slot.SetActive(true);
-							var caption = Slot.GetComponentInChildren<Text>();
-
-							caption.text = "<" + Item_room.Name + ">\nMembers: " + Item_room.PlayerCount + " / " + Item_room.MaxPlayers;
-						}
-						else
-						{
-							break;
-						}
+						var Item_room = Rooms[j];
+						caption.text = "<" + Item_room.Name + ">\nMembers: " + Item_room.PlayerCount + " / " + Item_room.MaxPlayers;
 					}
 				}
 			}
 			else
 			{
-				Description?.SetActive(true);
+				Description.SetActive(true);
+				ItemPanel.SetActive(false);
 			}
-
-			yield return new WaitForSeconds(5f);
-		}
-		else
-		{
-			yield return null;
 		}
 	}
 }

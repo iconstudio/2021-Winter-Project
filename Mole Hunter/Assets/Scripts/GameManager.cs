@@ -23,7 +23,8 @@ public class GameManager : PunBehaviour
 	public const string GAME_VERSION = "0.0.1";
 	public ExPhoton.Hashtable Player_attributes;
 	public ExPhoton.Hashtable Room_attributes;
-	public RoomOptions Room_options;
+	public static RoomOptions Room_options;
+	public static TypedLobby Lobby_options;
 
 	public static readonly long[] SEARCE_SCORE_DIFFS = new long[] { 200, 300, 400 };
 
@@ -63,6 +64,10 @@ public class GameManager : PunBehaviour
 		Room_options.IsOpen = true;
 		Room_options.MaxPlayers = 2;
 		Room_options.CustomRoomProperties = Room_attributes;
+
+		Lobby_options = new();
+		Lobby_options.Name = "DefaultLobby";
+		Lobby_options.Type = LobbyType.Default;
 
 		PhotonNetwork.autoCleanUpPlayerObjects = true;
 		PhotonNetwork.autoJoinLobby = false;

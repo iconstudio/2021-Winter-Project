@@ -57,7 +57,6 @@ public class MainManager : PunBehaviour
 				}
 				break;
 			}
-			UpdateServerStatus();
 		}
 	}
 
@@ -66,8 +65,8 @@ public class MainManager : PunBehaviour
 	private GameObject UI_signin, UI_lobby, UI_room, UI_rooms_view, UI_msg_leave_room;
 	public TMP_InputField Inputfield_nickname;
 	public Button Button_connections;
-	public Text Text_button_connections;
-	public TextMeshProUGUI Text_notification, Text_network, Text_server;
+	public Text Text_button_connections, Text_server;
+	public TextMeshProUGUI Text_notification, Text_network;
 
 	public void Awake()
 	{
@@ -89,7 +88,7 @@ public class MainManager : PunBehaviour
 		Text_network.text = "Server is connected.";
 
 		obj = GameObject.Find("ServerStatusText");
-		Text_server = obj.GetComponent<TextMeshProUGUI>();
+		Text_server = obj.GetComponent<Text>();
 
 		obj = GameObject.Find("MainConnectButton");
 		Button_connections = obj.GetComponent<Button>();
@@ -118,8 +117,6 @@ public class MainManager : PunBehaviour
 				LoginAndJoinLobbyProceed();
 			}
 
-			UpdateServerStatus();
-
 			switch (Phase)
 			{
 				case PHASE.SIGNIN:
@@ -130,12 +127,14 @@ public class MainManager : PunBehaviour
 
 				case PHASE.LOBBY:
 				{
-
+					UpdateServerStatus();
 				}
 				break;
 
 				case PHASE.IN_ROOM:
 				{
+					UpdateServerStatus();
+
 					if (!PN.inRoom)
 					{
 						Phase = PHASE.SIGNIN;
@@ -148,7 +147,7 @@ public class MainManager : PunBehaviour
 
 	public void LoginAndJoinLobbyProceed()
 	{
-		if (PN.connected
+		if (PN.connectedAndReady
 			&& !PN.insideLobby
 			&& Inputfield_nickname is not null)
 		{
@@ -163,7 +162,7 @@ public class MainManager : PunBehaviour
 
 					print("Player's nickname is " + My_nickname + ".");
 
-					PN.JoinLobby();
+					PN.JoinLobby(GameManager.Lobby_options);
 				}
 				else
 				{
@@ -190,27 +189,28 @@ public class MainManager : PunBehaviour
 	}
 	public void UpdateServerStatus()
 	{
-		Text_server.text = "Version: " + PN.gameVersion
-		+ "\nTotal players: " + PN.countOfPlayers
-		+ "\nPlayers in lobby: " + PN.countOfPlayersOnMaster
-		+ "\nPlayers in room: " + PN.countOfPlayersInRooms
-		+ "\nName of lobby: " + PN.lobby.Name
-		+ "\nName of room: " + PN.room.Name
-		;
+		print(Text_server);
+		if (PN.connectedAndReady && Text_server is not null && Text_server.IsActive())
+		{
+			Text_server.text = "Version: " + PN.gameVersion
+			+ "\nTotal players: " + PN.countOfPlayers
+			+ "\nPlayers in lobby: " + PN.countOfPlayersOnMaster
+			+ "\nPlayers in room: " + PN.countOfPlayersInRooms
+			+ "\nName of lobby: " + PN.lobby.Name
+			+ "\nName of room: " + PN.room.Name
+			;
+		}
 	}
 	public void OnClickMainButton()
 	{
 		if (PN.connected)
 		{
-			if (PN.connected)
-			{
-				if (PN.insideLobby)
-					PN.LeaveLobby();
-				if (PN.inRoom)
-					PN.LeaveRoom();
+			if (PN.insideLobby)
+				PN.LeaveLobby();
+			if (PN.inRoom)
+				PN.LeaveRoom();
 
-				PN.Disconnect();
-			}
+			PN.Disconnect();
 		}
 		else
 		{
@@ -223,7 +223,7 @@ public class MainManager : PunBehaviour
 		{
 			var room_name = PN.playerName + "Room";
 			var result = PN.CreateRoom(room_name
-				, GameManager.Instance.Room_options
+				, GameManager.Room_options
 				, null);
 		}
 	}
@@ -286,7 +286,7 @@ public class MainManager : PunBehaviour
 			{
 				var room_name = PN.playerName + "Room";
 				var result = PN.CreateRoom(room_name
-					, GameManager.Instance.Room_options
+					, GameManager.Room_options
 					, null);
 
 				if (result)
@@ -366,6 +366,10 @@ public class MainManager : PunBehaviour
 		Phase = PHASE.IN_ROOM;
 		GameManager.My_room = PN.room.Name;
 		print("Joined to a room: " + PN.room.ToString());
+	}
+	public override void OnReceivedRoomListUpdate()
+	{
+
 	}
 	public override void OnLeftLobby()
 	{
