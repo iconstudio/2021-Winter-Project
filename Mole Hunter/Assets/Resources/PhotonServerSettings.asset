@@ -32,13 +32,4 @@ MonoBehaviour:
   - Marco
   - Polo
   - TaggedPlayer
-  - Chat
-  - DestroyRpc
-  - InstantiateRpc
-  - PickupItemInit
-  - PunPickup
-  - PunPickupSimple
-  - PunRespawn
-  - RequestForPickupItems
-  - RequestForPickupTimes
   DisableAutoOpenWizard: 1

@@ -26,7 +26,7 @@ public class Player : PunBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (MoleHunter.Is_connected && photonView.owner is not null)
+		if (PhotonNetwork.connected && photonView.owner is not null)
 		{
 			if (photonView.isMine)
 			{

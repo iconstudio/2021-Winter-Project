@@ -480,7 +480,7 @@ PrefabInstance:
       objectReference: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 4179672614455668114, guid: 638ade23ac323494c8dfb1d5e3d2c3ca, type: 3}
       propertyPath: m_Name
-      value: PrefabGameGlobal
+      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 4179672614455668116, guid: 638ade23ac323494c8dfb1d5e3d2c3ca, type: 3}
       propertyPath: m_RootOrder

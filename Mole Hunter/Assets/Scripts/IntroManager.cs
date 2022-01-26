@@ -13,21 +13,21 @@ public class IntroManager : PunBehaviour
 	{
 		yield return new WaitForSecondsRealtime(Period);
 
-		MoleHunter.LoadScene("SceneMain");
+		GameManager.LoadScene("SceneMain");
 	}
 
 	public void Start()
 	{
-		if (!MoleHunter.Is_connected)
+		if (!PhotonNetwork.connected)
 		{
-			var global = FindObjectOfType<MoleHunter>();
+			var global = FindObjectOfType<GameManager>();
 			if (global != null)
 			{
-				global.Connect();
+				GameManager.Connect();
 			}
 			else
 			{
-				throw new MissingReferenceException("There is no object of 'MoleHunter'.");
+				throw new MissingReferenceException("There is no GameManager.");
 			}
 		}
 	}

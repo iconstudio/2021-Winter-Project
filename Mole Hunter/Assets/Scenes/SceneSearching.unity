@@ -217,7 +217,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &1016797919
+--- !u!1001 &1384382533
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -226,7 +226,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4179672614455668114, guid: 638ade23ac323494c8dfb1d5e3d2c3ca, type: 3}
       propertyPath: m_Name
-      value: PrefabGameGlobal
+      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 4179672614455668116, guid: 638ade23ac323494c8dfb1d5e3d2c3ca, type: 3}
       propertyPath: m_RootOrder
