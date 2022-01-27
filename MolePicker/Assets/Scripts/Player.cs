@@ -19,6 +19,9 @@ public class Player : PunBehaviour
 
 	void Awake()
 	{
+		photonView.
+		photonView.ownershipTransfer = OwnershipOption.Takeover;
+
 		if (!photonView.isMine)
 		{
 			// Camera
@@ -50,6 +53,8 @@ public class Player : PunBehaviour
 
 	public override void OnDisconnectedFromPhoton()
 	{
-
+		if (photonView.isMine)
+		{
+		}
 	}
 }
