@@ -29,7 +29,8 @@ public class RoomInSystem : PunBehaviour
 			var players_count = PN.room.PlayerCount;
 			if (PN.offlineMode || 0 < players_count)
 			{
-				print("Game is started,");
+				print("Game is started.");
+				//PN.
 				PN.LoadLevel("SceneGame");
 			}
 		}
