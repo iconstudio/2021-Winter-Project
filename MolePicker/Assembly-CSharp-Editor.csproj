@@ -54,30 +54,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="D:\yoyof\Documents\Git\2021-Winter-Project\MolePicker\Assets\Addons\Plugins\Metro\Photon3Unity3D.dll" />
-    <Analyzer Include="D:\yoyof\Documents\Git\2021-Winter-Project\MolePicker\Assets\Addons\Plugins\WebSocket\websocket-sharp.dll" />
-    <Analyzer Include="D:\yoyof\Documents\Git\2021-Winter-Project\MolePicker\Assets\Addons\Plugins\netstandard2.0\Photon3Unity3D.dll" />
-    <Analyzer Include="D:\yoyof\Documents\Git\2021-Winter-Project\MolePicker\Assets\Addons\Plugins\Photon3Unity3D.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\Views\PhotonTransformViewEditor.cs" />
-    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\PhotonEditorUtils.cs" />
-    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\ReorderableListResources.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\PhotonViewHandler.cs" />
+    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\ReorderableListResources.cs" />
+    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\AccountService.cs" />
+    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\Views\PhotonAnimatorViewEditor.cs" />
+    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\Views\PhotonRigidbody2DViewEditor.cs" />
+    <Compile Include="Assets\Addons\Photon Unity Networking\UtilityScripts\PhotonPlayer\Editor\PunTeamsInspector.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\ServerSettingsInspector.cs" />
-    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\PhotonViewInspector.cs" />
-    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\PunSceneSettings.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\CullAreaEditor.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\PhotonEditor.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\PhotonConverter.cs" />
-    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\Views\PhotonAnimatorViewEditor.cs" />
+    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\Views\PhotonTransformViewEditor.cs" />
+    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\PhotonEditorUtils.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\Views\PhotonRigidbodyViewEditor.cs" />
-    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\AccountService.cs" />
-    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\Views\PhotonRigidbody2DViewEditor.cs" />
-    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\PhotonGUI.cs" />
+    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\PunSceneSettings.cs" />
+    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\PhotonViewInspector.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\UtilityScripts\PhotonPlayer\Editor\PlayerRoomIndexingInspector.cs" />
-    <Compile Include="Assets\Addons\Photon Unity Networking\UtilityScripts\PhotonPlayer\Editor\PunTeamsInspector.cs" />
     <Compile Include="Assets\Addons\QuarterView 3D Action BE5\ReadMe\Scripts\Editor\ReadmeEditorBE5.cs" />
+    <Compile Include="Assets\Addons\Photon Unity Networking\Editor\PhotonNetwork\PhotonGUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -344,8 +340,14 @@
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets\Addons\Plugins\WebSocket\websocket-sharp.dll</HintPath>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.9\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Addons\Plugins\netstandard2.0\Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
@@ -361,12 +363,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets\Addons\Plugins\WebSocket\websocket-sharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Addons\Plugins\netstandard2.0\Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -776,6 +772,9 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
@@ -805,9 +804,6 @@
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

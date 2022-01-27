@@ -1,43 +1,35 @@
 using System;
+using System.Collections.Generic;
 using System.Collections;
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 using Photon;
 using PN = PhotonNetwork;
 using ExitGames.Client.Photon.StructWrapping;
-using System.Collections.Generic;
 
 public class LobbySystem : PunBehaviour
 {
 	public GameObject UI_msg_leave;
+	public Text Inputfield_title;
 
-	public void CreateOwnRoom()
+	public void CreateOwnRoom(string title)
 	{
 		if (!PN.inRoom)
 		{
-			var room_name = PN.playerName + "Room";
-
-			var metaphor = GameManager.META_PLAYER.SCORE_RANKING;
-			long my_score;
-			if (!PN.player.CustomProperties.TryGetValue<long>(metaphor, out my_score))
-			{
-				my_score = 0L;
-			}
-
-			var my_option = GameManager.Instance.Room_options;
-			my_option.CustomRoomProperties[metaphor] = my_score;
-
-			PN.CreateRoom(room_name
-				, my_option
-				, null);
+			PN.CreateRoom(title, GameManager.Instance.Room_options, PN.lobby);
 		}
 	}
 
 	public void OnClickCreateButton()
 	{
-		CreateOwnRoom();
+		var Title = Inputfield_title.text.Trim();
+		if (0 < Title.Length)
+		{
+			CreateOwnRoom(Title);
+		}
 	}
 	public void OnClickSearchButton()
 	{
@@ -46,60 +38,12 @@ public class LobbySystem : PunBehaviour
 			var roomsCount = PN.countOfRooms;
 			if (0 < roomsCount)
 			{
-				var rooms = PN.GetRoomList();
-				List<RoomInfo> room_pool = new();
-
-				var key = GameManager.META_PLAYER.SCORE_RANKING;
-				long player_score;
-				if (!PN.player.CustomProperties.TryGetValue<long>(key, out player_score))
-				{
-					player_score = 0;
-				}
-
-				foreach (var diff in GameManager.SEARCE_SCORE_DIFFS)
-				{
-					foreach (var room in rooms)
-					{
-						long target_score;
-						if (room.PlayerCount < room.MaxPlayers
-							&& room.CustomProperties.TryGetValue(key
-							, out target_score))
-						{
-							var score_begin = Math.Max(target_score - diff, 0);
-							var score_end = target_score + diff;
-							if (score_begin <= player_score && player_score < score_end)
-							{
-								room_pool.Add(room);
-							}
-						}
-					}
-
-					if (0 < room_pool.Count)
-					{
-						break;
-					}
-				}
-
-				room_pool.Sort((RoomInfo lhs, RoomInfo rhs) =>
-				{
-					long lhs_score;
-					lhs.CustomProperties.TryGetValue(key, out lhs_score);
-
-					long rhs_score;
-					lhs.CustomProperties.TryGetValue(key, out rhs_score);
-
-					return (int)(rhs_score - lhs_score);
-				});
-
-				var room_target = room_pool[0];
-				if (PN.JoinRoom(room_target.Name))
-				{
-					return; 
-				}
+				PN.JoinRandomRoom();
 			}
-
-			// if can't find any proper room.
-			CreateOwnRoom();
+			else
+			{
+				OnClickCreateButton();
+			}
 		}
 	}
 	public void OnClickDisconnectButton()
@@ -128,7 +72,7 @@ public class LobbySystem : PunBehaviour
 	{
 		UI_msg_leave.SetActive(false);
 	}
-	void Start()
+	void OnEnable()
 	{
 		if (!PN.connected)
 		{
@@ -136,6 +80,10 @@ public class LobbySystem : PunBehaviour
 		}
 	}
 
+	public override void OnCreatedRoom()
+	{
+		PN.SetMasterClient(PN.player);
+	}
 	public override void OnJoinedRoom()
 	{
 		SceneManager.LoadScene("SceneRoomIn");
@@ -152,6 +100,11 @@ public class LobbySystem : PunBehaviour
 	{
 		//print((string)codeAndMsg[0] + (string)codeAndMsg[1]);
 		print(codeAndMsg);
+	}
+	public override void OnPhotonRandomJoinFailed(object[] codeAndMsg)
+	{
+		// if can't find any proper room
+		//OnClickCreateButton();
 	}
 	public override void OnDisconnectedFromPhoton()
 	{

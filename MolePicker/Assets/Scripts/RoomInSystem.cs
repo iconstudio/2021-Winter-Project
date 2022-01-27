@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.ComponentModel;
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,10 +11,11 @@ using PN = PhotonNetwork;
 
 public class RoomInSystem : PunBehaviour
 {
+	public PhotonPlayer Opponent;
+	public PlayerInfoPanel Panel_view_master, Panel_view_others;
 	public GameObject UI_msg_leave;
-	public Text Text_my_name, Text_oppo_name;
+	public Text Text_room_title;
 	public GameObject Button_start;
-	public int Players_number = 0;
 	public bool Game_started = false;
 
 	public void OnClickLeaveButton()
@@ -44,48 +46,69 @@ public class RoomInSystem : PunBehaviour
 		{
 			if (PN.isMasterClient)
 			{
-				if (1 < Players_number)
+				if (1 < PN.room.PlayerCount)
 				{
-					var playerList = PN.otherPlayers;
-					var NewMaster = playerList[0];
-					if (NewMaster is not null)
-					{
-						PN.SetMasterClient(NewMaster);
-					}
+					PN.SetMasterClient(Opponent);
 				}
 			}
 
 			PN.LeaveRoom();
+			UpdatePanels();
+		}
+	}
+	private void UpdatePanels()
+	{
+		var master = PN.masterClient;
+		var player = PN.player;
+		if (master is null)
+		{
+			PN.SetMasterClient(PN.player);
+			Panel_view_master.Owner = player;
+		}
+		else if (master == player)
+		{
+			Panel_view_master.Owner = player;
+			if (Opponent is null)
+			{
+				Panel_view_others.Owner = null;
+			}
+			else
+			{
+				Panel_view_others.Owner = Opponent;
+			}
+		}
+		else
+		{
+			Panel_view_master.Owner = master;
+			Panel_view_others.Owner = player;
 		}
 	}
 
 	void Awake()
 	{
 		UI_msg_leave.SetActive(false);
-
-		Text_my_name.text = PN.playerName;
-		Text_oppo_name.text = "";
+		Game_started = false;
 	}
-	void Start()
+	void OnEnable()
 	{
 		if (!PN.connected)
 		{
 			GameManager.Connect();
 		}
 
-		if (Button_start is not null)
+		Text_room_title.text = PN.room.Name;
+
+		if (!PN.isMasterClient)
 		{
-			if (!PN.isMasterClient)
-			{
-				Button_start.SetActive(false);
-			}
-			else
-			{
-				Button_start?.SetActive(true);
-			}
+			Opponent = PN.masterClient;
+			Button_start.SetActive(false);
+		}
+		else
+		{
+			Button_start?.SetActive(true);
 		}
 
-		Game_started = false;
+		UpdatePanels();
 	}
 
 	public override void OnMasterClientSwitched(PhotonPlayer newMasterClient)
@@ -98,26 +121,26 @@ public class RoomInSystem : PunBehaviour
 		{
 			Button_start?.SetActive(false);
 		}
+		UpdatePanels();
 	}
 	public override void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
 	{
-		Players_number = PN.room.PlayerCount;
-		Text_oppo_name.text = newPlayer.NickName;
+		Opponent = newPlayer;
+		UpdatePanels();
 	}
 	public override void OnPhotonPlayerDisconnected(PhotonPlayer otherPlayer)
 	{
-		if (otherPlayer == PN.player)
-		{
-			//
-		}
-		else
-		{
-			Text_oppo_name.text = "";
-		}
+		Opponent = null;
+		UpdatePanels();
 		Game_started = false;
 	}
 	public override void OnLeftRoom()
 	{
+		if (PN.isMasterClient)
+		{
+			OnClickYesToLeaveButton();
+		}
+
 		if (PN.connectedAndReady)
 		{
 			SceneManager.LoadScene("SceneLobby");

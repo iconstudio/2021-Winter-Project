@@ -30,7 +30,7 @@ public class SignInSystem : PunBehaviour
 		if (PN.connectedAndReady && !PN.insideLobby)
 		{
 			var My_nickname = Text_id.text.Trim();
-			if (3 <= My_nickname.Length)
+			if (3 < My_nickname.Length)
 			{
 				PlayerPrefs.SetString("NickName", My_nickname);
 				PN.playerName = My_nickname;
@@ -59,6 +59,8 @@ public class SignInSystem : PunBehaviour
 		{
 			GameManager.Connect();
 		}
+
+		Text_msg.text = Msg_sign_in;
 	}
 
 	public override void OnJoinedLobby()

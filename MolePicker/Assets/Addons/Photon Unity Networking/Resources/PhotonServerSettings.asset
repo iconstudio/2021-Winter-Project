@@ -28,6 +28,7 @@ MonoBehaviour:
   NetworkLogging: 1
   RunInBackground: 1
   RpcList:
+  - RequestForPickupTimes
   - Chat
   - DestroyRpc
   - InstantiateRpc
@@ -35,6 +36,7 @@ MonoBehaviour:
   - PunPickup
   - PunPickupSimple
   - PunRespawn
+  - GameStart
+  - GameInitialize
   - RequestForPickupItems
-  - RequestForPickupTimes
   DisableAutoOpenWizard: 1
