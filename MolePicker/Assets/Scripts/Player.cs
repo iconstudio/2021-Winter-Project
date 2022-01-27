@@ -15,12 +15,14 @@ public class Player : PunBehaviour
 	[Header(("Props"))]
 	public Animator My_animator;
 	public Camera My_camera;
+	public Rigidbody My_weight;
 
 	void Awake()
 	{
-		if (photonView.isMine)
+		if (!photonView.isMine)
 		{
 			// Camera
+			My_weight.useGravity = false;
 		}
 	}
 	void Start()
@@ -30,7 +32,7 @@ public class Player : PunBehaviour
 
 		}
 	}
-	void Update()
+	void FixedUpdate()
 	{
 		if (!photonView.isMine)
 			return;

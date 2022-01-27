@@ -16,6 +16,10 @@ public class GameSystem : PunBehaviour
 			PN.Reconnect();
 		}
 	}
+	public override void OnPhotonPlayerDisconnected(PhotonPlayer otherPlayer)
+	{
+
+	}
 	public override void OnDisconnectedFromPhoton()
 	{
 
