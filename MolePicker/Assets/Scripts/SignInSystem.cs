@@ -34,6 +34,7 @@ public class SignInSystem : PunBehaviour
 			{
 				PlayerPrefs.SetString("NickName", My_nickname);
 				PN.playerName = My_nickname;
+				PN.player.SetScore(0);
 
 				print("Player's nickname is " + My_nickname + ".");
 

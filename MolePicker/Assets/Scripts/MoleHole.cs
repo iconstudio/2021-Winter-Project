@@ -1,18 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
-public class MoleHole : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+using Photon;
+using PN = PhotonNetwork;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public class MoleHole : PunBehaviour
+{
+	public bool available = true;
 }

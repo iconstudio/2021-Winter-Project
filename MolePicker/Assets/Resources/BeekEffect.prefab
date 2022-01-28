@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -1904964247609102057}
   - component: {fileID: 4834142918840001526}
   - component: {fileID: 2666108029189922464}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: BeekEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

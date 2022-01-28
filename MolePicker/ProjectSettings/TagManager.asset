@@ -8,13 +8,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Moles
   - Water
   - UI
-  - My Body
-  - 
-  - 
-  - 
+  - Player1Body
+  - Player2Body
+  - Player1UI
+  - Player2UI
   - 
   - 
   - 

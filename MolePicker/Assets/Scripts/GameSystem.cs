@@ -10,87 +10,190 @@ using Random = UnityEngine.Random;
 using TMPro;
 using Photon;
 using PN = PhotonNetwork;
+using Unity.VisualScripting;
+using UnityEditor;
 
 public class GameSystem : PunBehaviour
 {
-	[Header("Player (Mine)")]
-	public GameObject Player; // My Playing Entity
-	public int Score_rank; // Backup
+	[Header("Players")]
+	public PhotonPlayer Opponent;
+	public GameObject Player1, Player1_camera;
+	public GameObject Player2, Player2_camera;
+	public int ScoreStart = 0;
 	[Header("Props")]
 	public Camera Camera_main;
 	public GameObject Player_prefab;
-	public TextMeshProUGUI Text_countdown;
 	public GameObject UI_victory;
 	public GameObject Prefab_beek;
+	public TextMeshProUGUI Text_description;
 	[Header("Intro")]
 	public Camera Camera_intro;
 	public bool Intro_done = false;
-	public Vector3 Intro_cam_begin = new(0f, 400f, -10f);
-	public Vector3 Intro_cam_target = new(0f, 40f, -10f);
+	public Vector3 Intro_cam_begin = new(0f, 200f, -50f);
+	public Vector3 Intro_cam_target = new(0f, 40f, -15f);
 	public float Intro_durations = 1.8f;
 	public float Intro_time = 0f;
+	[Header("Game")]
+	public float Game_durations = 60f;
+	public float Game_time = 0f;
 	[Header("Spaces")]
 	public GameObject[] Player_spawn_points;
 	public MoleHole[] Enemy_spawn_points;
 
+
+	[PunRPC]
+	public void GameComplete()
+	{
+		print("The game is ended now.");
+		UI_victory.SetActive(true);
+
+		var score = ScoreStart;
+		var new_score = PN.player.GetScore();
+
+		Text_description.text = "Score is " + (score).ToString();
+		if (0 < new_score)
+			Text_description.text += " + " + new_score;
+	}
+	[PunRPC]
+	public void UpdateGameTimes(object time)
+	{
+		Game_time = (float)time;
+	}
 	[PunRPC]
 	public void GameStart()
 	{
-		if (photonView.isMine)
+		Intro_done = true;
+
+		if (PN.isMasterClient)
 		{
-			Camera_intro.gameObject.SetActive(false);
+			Player1_camera.gameObject.SetActive(true);
+			Player2_camera.gameObject.SetActive(false);
+			Camera_main = Player1_camera.GetComponent<Camera>();
 
-			var my_spawner = Player_spawn_points[0];
-			var my_look = Quaternion.identity;
-				//Quaternion.LookRotation(new Vector3(0f, 1f, 0f));
-
-			Player = CreatePlayerObject(my_spawner.transform.position, my_look);
-			//Camera_main = 
+			var view = Player1.GetComponent<PhotonView>();
+			view.TransferOwnership(PN.player);
+			StartCoroutine(MolesAppearScript());
 		}
-	}
-	public GameObject CreatePlayerObject(Vector3 position, Quaternion angle)
-	{
-		var player = PN.Instantiate(Player_prefab.name, position, angle, photonView.group);
+		else
+		{
+			Player1_camera.gameObject.SetActive(false);
+			Player2_camera.gameObject.SetActive(true);
+			Camera_main = Player2_camera.GetComponent<Camera>();
 
-		return player;
+			var view = Player2.GetComponent<PhotonView>();
+			view.TransferOwnership(PN.player);
+		}
+
+		Camera_intro.gameObject.SetActive(false);
+	}
+	[PunRPC]
+	public void CreateMole(Vector3 position, MoleHole home)
+	{
+		var new_mole = PN.Instantiate("Mole", position, Quaternion.identity, photonView.group);
+
+		new_mole.GetComponent<Mole>().Home = home;
+		home.available = false;
 	}
 	public IEnumerator IntroPresentation()
 	{
-		while (true)
+		if (photonView.isMine)
 		{
-			var ratio = Mathf.Min(1f, Intro_time / Intro_durations);
-			Camera_intro.transform.position = Vector3.Slerp(Intro_cam_begin, Intro_cam_target, ratio);
-
-			if (Intro_durations <= Intro_time)
+			while (true)
 			{
-				Intro_done = true;
-				photonView.RPC("GameStart", PhotonTargets.AllViaServer);
-				break;
-			}
-			Intro_time += Time.deltaTime;
+				var ratio = Mathf.Min(1f, Intro_time / Intro_durations);
+				Camera_intro.transform.position = Vector3.Slerp(Intro_cam_begin, Intro_cam_target, ratio);
 
-			yield return new WaitForEndOfFrame();
+				if (Intro_durations <= Intro_time)
+				{
+					photonView.RPC("GameStart", PhotonTargets.AllViaServer);
+					break;
+				}
+				Intro_time += Time.deltaTime;
+
+				yield return new WaitForEndOfFrame();
+			}
 		}
 	}
 	public IEnumerator MolesAppearScript()
 	{
-		while (true)
+		while (true) // on master
 		{
-			var choice = (int)Random.Range(0, Enemy_spawn_points.Length);
-			var selection = Enemy_spawn_points[choice];
+			if (Game_durations <= Game_time)
+			{
+				if (!PN.isMasterClient)
+				{
+					break;
+				}
 
-			//selection.SendMessage("");
+				while (true)
+				{
+					if (!photonView.isMine)
+					{
+						yield return new WaitForEndOfFrame();
+					}
+					else
+					{
 
-			yield return new WaitForSeconds(0.1f);
+						yield break;
+					}
+				}
+			}
+
+			var ratio = Game_time / Game_durations;
+
+			Vector3 position;
+			MoleHole home = null;
+			GameObject new_mole;
+			if (photonView.isMine)
+			{
+				var repeat = 1;
+				if (0.4f < ratio)
+				{
+					repeat = 2 + (int)(ratio / 0.4) * (int)Random.Range(0f, 2f);
+				}
+
+				for (var j = 0; j < repeat; j++)
+				{
+					for (var i = 0; i < 2; i++)
+					{
+						var choice = (int)Random.Range(0, Enemy_spawn_points.Length);
+
+						home = Enemy_spawn_points[choice];
+						if (home.available)
+							break;
+					}
+					if (home is not null && !home.available)
+						yield return new WaitForSeconds(0.01f);
+
+					home.available = false;
+
+					position = home.transform.position;
+					new_mole = PN.Instantiate("Mole", position, Quaternion.identity, photonView.group);
+					new_mole.GetComponent<Mole>().Home = home;
+					print("Creating a mole.");
+				}
+			};
+
+			var tick = 1f + (1f - ratio) * Random.Range(0.1f, 0.6f) + (1f - ratio) * 0.5f;
+			if (0.5 <= ratio)
+			{
+				tick = Mathf.Max(0.2f, tick * 0.75f);
+			}
+			yield return new WaitForSeconds(tick);
 		}
 	}
-	private void ForceVictory()
+	public void OnClickLobbyButton()
 	{
-
+		PN.LeaveRoom();
+		PN.LoadLevel("SceneLobby");
 	}
-	public void TryAttack()
+	public float GetGameElapsedTime()
 	{
-
+		return Game_time;
+	}
+	public float GetGameDuration()
+	{
+		return Game_durations;
 	}
 
 	void Start()
@@ -102,68 +205,57 @@ public class GameSystem : PunBehaviour
 			PN.Reconnect();
 		}
 
-		Camera_intro.gameObject.SetActive(true);
-
 		if (photonView.isMine)
 		{
-			Score_rank = PN.player.GetScore();
+			ScoreStart = PN.player.GetScore();
 			PN.player.SetScore(0);
-		}
 
-		// Game System Management
-		if (PN.isMasterClient)
-		{
-			StartCoroutine(IntroPresentation());
-			// Setup the board
-
-			// Create players (2 players)
-
-			// Change the phase
-
-			// Start timer
-
-			// 
-		}
-		else
-		{
+			// Game System Management
+			if (PN.isMasterClient)
+			{
+				StartCoroutine(IntroPresentation());
+			}
 		}
 	}
 	void Update()
 	{
 		if (Intro_done)
 		{
+			Game_time += Time.deltaTime;
+
+			if (photonView.isMine && Game_durations <= Game_time)
+			{
+				Game_time = Game_durations;
+				
+				photonView.RPC("GameComplete", PhotonTargets.All);
+			}
+
 			RaycastHit hit;
 
-			var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			var ray = Camera_main.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(ray, out hit))
 			{
 				if (hit.collider is not null)
 				{
-					if (Input.GetMouseButtonDown(0))
+					var hit_obj = hit.collider.gameObject;
+					if (hit_obj is not null)
 					{
-						if (photonView.isMine)
+						print("Hit to " + hit_obj.name);
+
+						if (Input.GetMouseButtonDown(0))
 						{
+							var hit_name = hit_obj.name;
 							// Attack
-							PN.player.AddScore(10);
+							if (hit_name.Equals("Mole") || hit_name.Equals("Mole(Clone)"))
+							{
+								PN.player.AddScore(10);
+								print("Attack!");
+								PN.Destroy(hit_obj);
+							}
+
+							// Create a particle effect
+							PN.Instantiate(Prefab_beek.name, hit.point, Quaternion.identity, 0);
 						}
-
-						// Create a particle effect
-						PN.Instantiate(Prefab_beek.name, hit.point, Quaternion.identity, photonView.group);
-					}
-
-					var obj = hit.collider.gameObject;
-					if (obj is not null)
-					{
-						var plc = obj.GetComponent<Player>();
-						if (obj.GetType() == typeof(Player))
-						{
-
-						}
-					}
-
-					if (hit.rigidbody != null)
-					{
-						//hit.rigidbody.AddForceAtPosition(ray.direction * 3f, hit.point);
 					}
 				}
 			}
@@ -178,13 +270,26 @@ public class GameSystem : PunBehaviour
 
 	}
 
+	public override void OnLeftRoom()
+	{
+		if (0f == Game_time)
+		{
+			PN.player.SetScore(ScoreStart);
+		}
+		else
+		{
+			PN.player.AddScore(ScoreStart);
+		}
+	}
 	public override void OnPhotonPlayerDisconnected(PhotonPlayer otherPlayer)
 	{
-
+		if (photonView.isMine)
+		{
+			photonView.RPC("GameComplete", PhotonTargets.All);
+		}
 	}
 	public override void OnDisconnectedFromPhoton()
 	{
-		PN.player.SetScore(Score_rank);
 		SceneManager.LoadScene("SceneSignIn");
 	}
 }

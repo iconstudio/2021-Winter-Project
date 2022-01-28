@@ -38,5 +38,10 @@ MonoBehaviour:
   - PunRespawn
   - GameStart
   - GameInitialize
+  - CreateMole
   - RequestForPickupItems
+  - UpdateGameTimes
+  - GameComplete
+  - CreateMole
+  - UpdateScore
   DisableAutoOpenWizard: 1
