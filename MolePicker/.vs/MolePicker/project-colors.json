@@ -5,7 +5,17 @@
       "ProjectGuid": "46a3bd41-45da-a924-378d-b71a0378b8b0",
       "DisplayName": "Assembly-CSharp",
       "ColorIndex": 0
+    },
+    "a146761c-5c4d-575e-b1b6-7724606128c7": {
+      "ProjectGuid": "a146761c-5c4d-575e-b1b6-7724606128c7",
+      "DisplayName": "Assembly-CSharp-Editor",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "기타 파일",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
