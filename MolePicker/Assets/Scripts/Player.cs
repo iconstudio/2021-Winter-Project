@@ -51,12 +51,12 @@ public class Player : PunBehaviour
 
 			photonView.RPC("UpdateInfos", PhotonTargets.All, varis);
 		}
-		
+
 		Text_score.text = "Score: " + PN.player.GetScore();
 		Text_time.text = "Time: " + Mathf.FloorToInt(life) + " / " + dur;
 	}
-    private void FixedUpdate()
-    {
+	private void FixedUpdate()
+	{
 		var input_x = Input.GetAxisRaw("Horizontal");
 		var input_y = Input.GetAxisRaw("Vertical");
 
@@ -64,9 +64,8 @@ public class Player : PunBehaviour
 		transform.TransformDirection(force);
 
 		if (My_body.velocity.magnitude <= Move_speed)
-        {
-			My_body.;
-        }
-		My_body.AddRelativeForce(force);
-    }
+		{
+			My_body.AddRelativeForce(force);
+		}
+	}
 }

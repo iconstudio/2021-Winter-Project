@@ -107,7 +107,7 @@
     <Compile Include="Assets\Scripts\LeaveQueryMsg.cs" />
     <Compile Include="Assets\Scripts\IntroSystem.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs" />
-    <Compile Include="Assets\PlayerInfoPanel.cs" />
+    <Compile Include="Assets\Scripts\PlayerInfoPanel.cs" />
     <Compile Include="Assets\Scripts\BeekEffect.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\Plugins\PhotonNetwork\Views\PhotonTransformViewPositionControl.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\UtilityScripts\ShowStatusWhenConnecting.cs" />
@@ -144,6 +144,7 @@
     <Compile Include="Assets\Addons\Photon Unity Networking\UtilityScripts\PunTurnManager.cs" />
     <Compile Include="Assets\Scripts\Mole.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\UtilityScripts\OnStartDelete.cs" />
+    <Compile Include="Assets\Scripts\Shovel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMPro.cginc" />
