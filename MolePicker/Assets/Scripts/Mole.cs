@@ -25,9 +25,6 @@ public class Mole : PunBehaviour
 			Stand_time = Stand_duration;
 
 			Begin = transform.position;
-		} else
-		{
-			Rigid_body.useGravity = false;
 		}
 	}
 	void Update()
