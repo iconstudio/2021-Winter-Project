@@ -82,6 +82,7 @@
     <Compile Include="Assets\Addons\Photon Unity Networking\Plugins\PhotonNetwork\GizmoType.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\Plugins\PhotonNetwork\Room.cs" />
     <Compile Include="Assets\Scripts\SignInSystem.cs" />
+    <Compile Include="Assets\Scripts\Shovel.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\Plugins\PhotonNetwork\Views\PhotonTransformViewRotationControl.cs" />
     <Compile Include="Assets\Scripts\SignInNetworkMessage.cs" />
     <Compile Include="Assets\Addons\PhotonChatApi\ChannelWellKnownProperties.cs" />
@@ -144,7 +145,6 @@
     <Compile Include="Assets\Addons\Photon Unity Networking\UtilityScripts\PunTurnManager.cs" />
     <Compile Include="Assets\Scripts\Mole.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\UtilityScripts\OnStartDelete.cs" />
-    <Compile Include="Assets\Scripts\Shovel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMPro.cginc" />
