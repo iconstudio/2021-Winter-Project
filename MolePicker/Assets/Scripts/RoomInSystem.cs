@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 using Photon;
 using PN = PhotonNetwork;
+using UnityEngine.Timeline;
 
 public class RoomInSystem : PunBehaviour
 {
@@ -33,10 +34,15 @@ public class RoomInSystem : PunBehaviour
 			if (PN.offlineMode || 0 < players_count)
 			{
 				print("Game is started.");
-				Game_started = true;
-				PN.room.IsVisible = false;
-				PN.room.IsOpen = false;
-				PN.LoadLevel("SceneGame");
+
+				if (photonView.isMine)
+				{
+					Game_started = true;
+
+					PN.room.IsVisible = false;
+					PN.room.IsOpen = false;
+					PN.LoadLevel("SceneGame");
+				}
 			}
 		}
 	}
@@ -49,6 +55,7 @@ public class RoomInSystem : PunBehaviour
 				if (1 < PN.room.PlayerCount)
 				{
 					PN.SetMasterClient(Opponent);
+					Opponent.SetColor(GameManager.Player_color_1);
 				}
 			}
 
@@ -63,6 +70,8 @@ public class RoomInSystem : PunBehaviour
 		if (master is null)
 		{
 			PN.SetMasterClient(PN.player);
+			PN.player.SetColor(GameManager.Player_color_1);
+
 			Panel_view_master.Owner = player;
 		}
 		else if (master == player)
@@ -75,12 +84,16 @@ public class RoomInSystem : PunBehaviour
 			else
 			{
 				Panel_view_others.Owner = Opponent;
+				Opponent.SetColor(GameManager.Player_color_2);
 			}
 		}
 		else
 		{
 			Panel_view_master.Owner = master;
 			Panel_view_others.Owner = player;
+
+			master.SetColor(GameManager.Player_color_1);
+			player.SetColor(GameManager.Player_color_2);
 		}
 	}
 

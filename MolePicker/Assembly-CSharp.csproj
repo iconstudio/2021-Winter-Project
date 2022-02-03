@@ -145,6 +145,7 @@
     <Compile Include="Assets\Addons\Photon Unity Networking\UtilityScripts\PunTurnManager.cs" />
     <Compile Include="Assets\Scripts\Mole.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\UtilityScripts\OnStartDelete.cs" />
+    <Compile Include="Assets\Scripts\MolePlayerProps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -166,6 +167,7 @@
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Addons\Photon Unity Networking\readme.txt" />
+    <None Include="Assets\BrokenVector\LowPolyTreePack\README.txt" />
     <None Include="Assets\Addons\Plugins\netstandard2.0\Photon3Unity3D.dll" />
     <None Include="Assets\Addons\Plugins\Photon3Unity3D.dll" />
     <None Include="Assets\Addons\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />

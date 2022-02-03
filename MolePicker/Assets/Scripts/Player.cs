@@ -19,6 +19,7 @@ public class Player : PunBehaviour
 	public Camera My_camera;
 	public TMP_Text Text_score, Text_time;
 	public GameObject My_shovel;
+	public Light My_light;
 	public Rigidbody My_body;
 
 	[Header(("Attributes"))]
@@ -35,9 +36,16 @@ public class Player : PunBehaviour
 		Score = PN.player.GetScore();
 	}
 
-	void OnEnable()
+	void Awake()
 	{
 		System = GameObject.Find("GameSystem").GetComponent<GameSystem>();
+	}
+	void OnEnable()
+	{
+		if (photonView.isMine)
+		{
+			My_light.color = PN.player.GetColor();
+		}
 	}
 	void Update()
 	{

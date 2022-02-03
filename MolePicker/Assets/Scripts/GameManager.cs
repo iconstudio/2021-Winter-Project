@@ -19,6 +19,8 @@ public class GameManager : PunBehaviour
 
 	public delegate bool PlyerPredicate(PhotonPlayer player);
 	public RoomOptions Room_options;
+	public static Color Player_color_1 = new(246f, 255f, 255f);
+	public static Color Player_color_2 = new(2548f, 54f, 30f);
 
 	public static void Connect()
 	{
