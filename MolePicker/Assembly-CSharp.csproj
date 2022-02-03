@@ -60,6 +60,7 @@
     <Compile Include="Assets\Addons\Photon Unity Networking\Plugins\PhotonNetwork\PingCloudRegions.cs" />
     <Compile Include="Assets\Addons\Plugins\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\Plugins\PhotonNetwork\Extensions.cs" />
+    <Compile Include="Assets\Scripts\MolePlayerProps.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\Plugins\PhotonNetwork\PhotonClasses.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\Plugins\PhotonNetwork\LoadbalancingPeer.cs" />
@@ -145,7 +146,6 @@
     <Compile Include="Assets\Addons\Photon Unity Networking\UtilityScripts\PunTurnManager.cs" />
     <Compile Include="Assets\Scripts\Mole.cs" />
     <Compile Include="Assets\Addons\Photon Unity Networking\UtilityScripts\OnStartDelete.cs" />
-    <Compile Include="Assets\Scripts\MolePlayerProps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Addons\TextMesh Pro\Shaders\TMPro.cginc" />
