@@ -35,14 +35,11 @@ public class RoomInSystem : PunBehaviour
 			{
 				print("Game is started.");
 
-				if (photonView.isMine)
-				{
-					Game_started = true;
+				Game_started = true;
 
-					PN.room.IsVisible = false;
-					PN.room.IsOpen = false;
-					PN.LoadLevel("SceneGame");
-				}
+				PN.room.IsVisible = false;
+				PN.room.IsOpen = false;
+				PN.LoadLevel("SceneGame");
 			}
 		}
 	}
